@@ -13,3 +13,43 @@
  *= require_tree .
  *= require_self
  */
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+ 
+ body {
+  font-family: 'Helvetica Neve', sans-serif;
+  color: #333;
+  padding: 33px;
+  line-height: 18px;
+ }
+
+h1{
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.bookers-text {
+  font-weight: bolder;
+}
+
+p {
+  font-size: 0.8em;
+  margin: 33px;
+}
+
+.start-button {
+  color: #666;
+  font-size: 0.8em;
+  text-decoration: underline;
+  margin: 33px;
+}
+
+.start-button:hover {
+  background-color: #000;
+  color: #fff;
+  text-decoration: underline;
+}

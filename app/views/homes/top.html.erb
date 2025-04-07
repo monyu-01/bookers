@@ -1,2 +1,15 @@
-<h1>Homes#top</h1>
-<p>Find me in app/views/homes/top.html.erb</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bookers</title>
+  </head>
+  <body>
+    <h1>ようこそ <span class="bookers-text">Bookers</span> へ！</h1>
+    <p><span class="bookers-text">Bookers</span>では、さまざまな書籍に関するあなたの意見や</p>
+    <p>印象を共有し交換することができます</p>
+    <%= link_to 'start', books_path, class: 'start-button' %>
+  </body>
+</html>
+
