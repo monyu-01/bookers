@@ -16,6 +16,16 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
   end
 
+  def update
+    @book = Book.find(params[:id])
+
+    if  @book.update(book_params)
+      redirect_to @book, notice: 'Book was successfully updated.'
+    else 
+      render :edit
+    end
+  end
+
   def create 
     @book = Book.new(book_params)
 
