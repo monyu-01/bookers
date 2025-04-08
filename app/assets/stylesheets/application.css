@@ -32,8 +32,9 @@ h1{
   font-weight: bold;
 }
 
-.bookers-text {
-  font-weight: bolder;
+strong {
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  font-weight: bold;
 }
 
 p {
