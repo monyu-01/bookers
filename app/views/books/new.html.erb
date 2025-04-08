@@ -1,7 +1,12 @@
-<h1>Books#new</h1>
-<p>Find me in app/views/books/new.html.erb</p>
-
-<%= form_with model: @book, local: true do |form| %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <%= form_with model: @book, local: true do |form| %>
   <div>
     <%= form.label :title, 'Book Title' %>
     <%= form.text_field :title %>
@@ -16,3 +21,8 @@
     <%= form.submit 'Create Book' %>
   </div>
 <% end %>
+</body>
+</html>
+
+
+
