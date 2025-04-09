@@ -15,19 +15,18 @@
           <td><%= book.title %></td>
           <td><%= book.body %></td>
           <td>
-            <%= link_to 'Show', book_path(book) %> |
-            <%= link_to 'Edit', edit_book_path(book) %> |
+            <%= link_to 'Show', book_path(book) %> 
+            <%= link_to 'Edit', edit_book_path(book) %> 
             <%= link_to 'Destroy', book_path(book), method: :delete, data: { confirm: "Are you sure?" } %>
           </td>
         </tr>
       <% end %>
     </tbody>
   </table>
-
-  <h1><strong>New book</strong></h1>
+  <h2><strong>New book</strong></h2>
 
   <% if @book.errors.any? %>
-    <div class="error-messages">
+    <div id="error_explanation">
       <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
       <ul>
         <% @book.errors.full_messages.each do |message| %>
@@ -38,19 +37,18 @@
   <% end %>
 
       <%= form_with model: @book, local:true do |form| %>
-        <div>
-          <%= form.label :title,'Title' %><br>
-          <%= form.text_field :title, class: 'input-field' + (' invalid' if @book.errors[:title].any?).to_s %>
+        <div class="field">
+          <%= form.label :title,'Title' %>
+          <%= form.text_field :title %>
         </div>
 
-        <div>
-          <%= form.label :body, 'Body' %><br>
-          <%= form.text_area :body,class: 'input-field' + (' invalid' if @book.errors[:body].any?).to_s %>
+        <div class="field">
+          <%= form.label :body, 'Body' %>
+          <%= form.text_area :body %>
         </div>
 
-        <div>
+        <div class="actions">
           <%= form.submit 'Create Book' %>
         </div>
-      <% end %>
-      
+      <% end %>  
 </body>
